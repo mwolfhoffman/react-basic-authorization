@@ -1,6 +1,6 @@
 # Basic React Authorization
 
-Sample to set up public and private routes with react router. 
+Example react project that demonstrates how to handle private and public routes and layouts using react-router. 
 
 ### To run
 1. `pnpm dev`
