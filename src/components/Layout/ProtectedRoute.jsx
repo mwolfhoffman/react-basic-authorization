@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { useEffect } from "react";
 import { useOutlet } from "react-router-dom";
+import ProtectedNav from "../Nav/Protected";
 
 export const ProtectedRoute = () => {
   const { user, is2FAVerified } = useAuth();
@@ -18,7 +19,10 @@ export const ProtectedRoute = () => {
   }, [user])
 
   if(user){
-    return (<>{outlet}</>);
+    return (<>
+    <ProtectedNav/>
+    {outlet}
+    </>);
   }
 
 };

@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/Home";
 import { Verify2FA } from "./pages/Verify2FA";
 import { LoginPage } from "./pages/Login";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/Layout/ProtectedRoute";
 import { Secret } from "./pages/Secret";
 import { AnotherSecret } from "./pages/AnotherSecret";
-import PublicRoute from "./components/PublicRoute";
+import PublicRoute from "./components/Layout/PublicRoute";
 
 export default function AppRoutes() {
     return (

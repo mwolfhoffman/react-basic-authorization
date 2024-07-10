@@ -1,11 +1,5 @@
-import { useAuth } from "../hooks/useAuth";
 
 export const AnotherSecret = () => {
-  const { logout } = useAuth();
-
-  const handleLogout = () => {
-    logout();
-  };
 
   return (
     <div>

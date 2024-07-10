@@ -1,9 +1,12 @@
 import { useOutlet } from "react-router-dom";
+import PublicNav from "../Nav/Public";
 
 export const PublicRoute = () => {
     const outlet = useOutlet()
-    // TODO: public nav here
-    return(<>{outlet}</>);
+    return (<>
+        <PublicNav />
+        {outlet}
+    </>);
 
 };
 
