@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import { useOutlet } from "react-router-dom";
 import ProtectedNav from "../Nav/Protected";
 
-export const ProtectedRoute = () => {
-  const { user, is2FAVerified, protectedPagesOnly } = useAuth();
+export const PrivateRoute = () => {
+  const { user, is2FAVerified } = useAuth();
 
   const navigate = useNavigate()
   const outlet = useOutlet()
 
   useEffect(() => {
-    if (!user || !protectedPagesOnly) {
+    if (!user || !is2FAVerified) {
       navigate("/login")
     }
   }, [user])
@@ -25,4 +25,4 @@ export const ProtectedRoute = () => {
 
 };
 
-export default ProtectedRoute;
+export default PrivateRoute;

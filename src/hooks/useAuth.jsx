@@ -35,6 +35,7 @@ export const AuthProvider = ({ children }) => {
   const value = {
     user,
     is2FAVerified,
+    protectedPagesOnly: user && !is2FAVerified,
     login,
     logout,
     verify2FACode,
