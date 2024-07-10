@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
     // Mock verification logic
     if (code === "0000") {
       setIs2FAVerified(true);
-      navigate("/secret"); // Navigate to a protected route after successful 2FA
+      navigate("/first-secret"); // Navigate to a protected route after successful 2FA
       return true;
     }
     return false;

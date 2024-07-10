@@ -36,7 +36,7 @@ export const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
+        <button className=" border-blue-50 rounded-md" type="submit">Login</button>
       </form>
     </div>
   )
